@@ -13474,6 +13474,105 @@
       "properties": {
         "deal": {
           "properties": {
+            "accruals": {
+              "description": "取引の債権債務行",
+              "items": {
+                "properties": {
+                  "account_item_id": {
+                    "description": "勘定科目ID",
+                    "example": 803,
+                    "maximum": 2147483647,
+                    "minimum": 1,
+                    "type": "integer"
+                  },
+                  "amount": {
+                    "description": "取引金額",
+                    "example": 5250,
+                    "maximum": 9223372036854776000,
+                    "minimum": -9223372036854776000,
+                    "type": "integer"
+                  },
+                  "description": {
+                    "description": "備考",
+                    "example": "備考",
+                    "type": "string"
+                  },
+                  "entry_side": {
+                    "description": "貸借（貸方: credit, 借方: debit）",
+                    "enum": [
+                      "credit",
+                      "debit"
+                    ],
+                    "example": "debit",
+                    "type": "string"
+                  },
+                  "id": {
+                    "description": "債権債務行ID",
+                    "example": 1,
+                    "maximum": 2147483647,
+                    "minimum": 1,
+                    "type": "integer"
+                  },
+                  "item_id": {
+                    "description": "品目ID",
+                    "example": 501,
+                    "maximum": 2147483647,
+                    "minimum": 1,
+                    "type": "integer",
+                    "x-nullable": true
+                  },
+                  "partner_code": {
+                    "description": "取引先コード",
+                    "example": "code001",
+                    "type": "string",
+                    "x-nullable": true
+                  },
+                  "partner_id": {
+                    "description": "取引先ID",
+                    "example": 201,
+                    "maximum": 2147483647,
+                    "minimum": 1,
+                    "type": "integer"
+                  },
+                  "section_id": {
+                    "description": "部門ID",
+                    "example": 1,
+                    "maximum": 2147483647,
+                    "minimum": 1,
+                    "type": "integer",
+                    "x-nullable": true
+                  },
+                  "tag_ids": {
+                    "description": "メモタグID",
+                    "example": [
+                      1,
+                      2,
+                      3
+                    ],
+                    "items": {
+                      "maximum": 2147483647,
+                      "minimum": 1,
+                      "type": "integer"
+                    },
+                    "type": "array"
+                  },
+                  "tax_code": {
+                    "description": "税区分コード",
+                    "example": 2,
+                    "maximum": 2147483647,
+                    "minimum": 0,
+                    "type": "integer"
+                  },
+                  "vat": {
+                    "description": "消費税額",
+                    "example": 250,
+                    "type": "integer"
+                  }
+                },
+                "type": "object"
+              },
+              "type": "array"
+            },
             "amount": {
               "description": "金額",
               "example": 5250,
